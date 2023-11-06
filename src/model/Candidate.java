@@ -2,7 +2,7 @@ package model;
 
 public class Candidate extends Person {
     private String politicalParty;
-    private String NumberVotes;
+    private int numberVotes;
 
     // #region get e set
 
@@ -14,12 +14,12 @@ public class Candidate extends Person {
         this.politicalParty = politicalParty;
     }
 
-    public String getNumberVotes() {
-        return NumberVotes;
+    public int getNumberVotes() {
+        return numberVotes;
     }
 
-    public void setNumberVotes(String numberVotes) {
-        NumberVotes = numberVotes;
+    public void setNumberVotes(int numberVotes) {
+        this.numberVotes = numberVotes;
     }
 
     // #endregion
@@ -29,10 +29,10 @@ public class Candidate extends Person {
     public Candidate() {
     }
 
-    public Candidate(String name, int age, String politicalParty, String numberVotes) {
+    public Candidate(String name, int age, String politicalParty, int numberVotes) {
         super(name, age);
         this.politicalParty = politicalParty;
-        NumberVotes = numberVotes;
+        this.numberVotes = numberVotes;
     }
 
     //#endregion
