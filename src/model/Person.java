@@ -1,6 +1,9 @@
 package model;
 
+import java.util.UUID;
+
 public class Person {
+    private UUID id;
     private String name;
     private int age;
     
@@ -17,16 +20,26 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
+    public UUID getId() {
+        return id;
+    }
+    public void setId(UUID id) {
+        this.id = id;
+    }
+    
     //#endregion
 
 
     //#region cotructor
     public Person() {
     }
-    public Person(String name, int age) {
+    public Person(UUID id, String name, int age) {
         this.name = name;
         this.age = age;
     }
+ 
+
+    
 
     //#endregion
 

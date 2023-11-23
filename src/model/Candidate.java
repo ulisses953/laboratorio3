@@ -1,8 +1,11 @@
 package model;
 
+import java.util.UUID;
+
 public class Candidate extends Person {
+    
     private String politicalParty;
-    private String NumberVotes;
+    private Integer numberVotes;
 
     // #region get e set
 
@@ -14,12 +17,12 @@ public class Candidate extends Person {
         this.politicalParty = politicalParty;
     }
 
-    public String getNumberVotes() {
-        return NumberVotes;
+    public Integer getNumberVotes() {
+        return numberVotes;
     }
 
-    public void setNumberVotes(String numberVotes) {
-        NumberVotes = numberVotes;
+    public void setNumberVotes(Integer numberVotes) {
+        this.numberVotes = numberVotes;
     }
 
     // #endregion
@@ -29,11 +32,19 @@ public class Candidate extends Person {
     public Candidate() {
     }
 
-    public Candidate(String name, int age, String politicalParty, String numberVotes) {
-        super(name, age);
+    public Candidate(UUID id,String name, int age, String politicalParty, int numberVotes) {
+        super(id,name, age);
         this.politicalParty = politicalParty;
-        NumberVotes = numberVotes;
+        this.numberVotes = numberVotes;
     }
 
+    @Override
+    public String toString() {
+        return "Candidate [id=" + super.getId() +  ", name="+ super.getName() + ", age=" + super.getAge()+", politicalParty=" + politicalParty + ", numberVotes=" + numberVotes + "] \n";
+    }
+
+    
     //#endregion
+
+    
 }
